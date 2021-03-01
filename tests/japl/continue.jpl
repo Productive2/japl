@@ -1,0 +1,52 @@
+//[Test: continue]
+//[source: mixed]
+var x = 10;
+while (x > 0) {
+  var b = 3;
+  var a = 2;
+  x = x - b + a;
+  if (x % a == 0) {
+    continue;
+  }
+  print(x);
+}
+//[end]
+/*
+[stdout]
+9
+7
+5
+3
+1
+[end]
+[end]
+*/
+
+//[Test: continue two]
+//[source: mixed]
+for (var x = 0; x < 10; x = x + 1) {
+  if (x == 2) {
+    print("two");
+  }
+  if (x % 3 == 2) {
+    continue;
+  }
+  if (x == 8) {
+    break;
+  }
+  print(x);
+}
+//[end]
+/*
+[stdout]
+0
+1
+two
+3
+4
+6
+7
+9
+[end]
+[end]
+*/
